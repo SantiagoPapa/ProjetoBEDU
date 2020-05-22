@@ -1,11 +1,22 @@
 const { Schema, model } = require('mongoose');
 
-const incidentSchema = new Schema({
-  title: String,
-  description: String,
-  author: String
-}, {
-  timestamps: true
-});
+const incidentSchema = new Schema(
+	{
+		title: {
+			type: String,
+			required: true
+		},
+		description: {
+			type: String
+		},
+		author: {
+			type: String,
+			required: true
+		}
+	},
+	{
+		timestamps: true
+	}
+);
 
 module.exports = model('Incident', incidentSchema);

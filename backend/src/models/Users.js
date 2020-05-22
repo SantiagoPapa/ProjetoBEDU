@@ -6,7 +6,9 @@ const userSchema = new Schema({
     required: true,
     trim: true,
     unique: true
-  }
+  },
+  name: String,
+  lastname: String
 }, {
   timestamps: true
 });

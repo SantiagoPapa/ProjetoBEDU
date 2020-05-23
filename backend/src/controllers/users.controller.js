@@ -16,11 +16,11 @@ usersController.getUser = async (req, res) => {
 
 // |POST FOR CREATE NEW USER| \\
 usersController.createUser = async (req, res) => {
-	const { username, name, lastname } = req.body;
+	const { firstname, lastname, email } = req.body;
 	const newUser = new User({
-		username,
-		name,
-		lastname
+		firstname,
+		lastname,
+		email
 	});
 	await newUser.save();
 	res.send({ message: 'Created User' });

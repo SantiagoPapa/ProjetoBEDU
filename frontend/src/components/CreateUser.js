@@ -20,7 +20,9 @@ export default class CreateUser extends Component {
             <h3>Create New User</h3>
             <form>
               <div className="form-group">
-                <input type="text" className="form-control" />
+                <input type="text" className="form-control my-3" placeholder="Firstname" />
+                <input type="text" className="form-control my-3" placeholder="Lastname"/>
+                <input type="email" className="form-control my-3" placeholder="E-mail"/>
               </div>
             </form>
           </div>

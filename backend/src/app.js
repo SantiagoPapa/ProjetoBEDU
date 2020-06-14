@@ -11,8 +11,8 @@ app.use(cors());
 app.use(express.json());
 
 // ROUTES
-app.use('/api/users', require('./routes/users'));
-app.use('/api/incidents', require('./routes/incidents'));
+// app.use('/api/users', require('./routes/users'));
+app.use('/api/incidentes', require('./routes/incidentes'));
 
 
 module.exports = app;

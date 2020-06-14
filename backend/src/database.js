@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const URL = process.env.MONGODB_URL
 ? process.env.MONGODB_URL
-: 'mongodb://localhost/DBprueba';
+: 'mongodb://localhost/DBteste';
 
 
 mongoose.connect(URL, {
@@ -14,5 +14,5 @@ mongoose.connect(URL, {
 const connection = mongoose.connection;
 
 connection.once('open', () => {
-  console.log('DB is Connected');
+  console.log('Banco de Dados -- Conectado!');
 }); 

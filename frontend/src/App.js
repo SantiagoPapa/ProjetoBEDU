@@ -4,19 +4,25 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 import Navigation from './components/Navigation';
-import IncidentsList from './components/IncidentsList';
-import CreateIncident from './components/CreateIncident';
-import CreateUser from './components/CreateUser';
+import Inicio from './components/Inicio';
+import Promocoes from './components/Promocoes';
+import Cardapio from './components/Cardapio';
+import Passeios from './components/Passeios';
+import Informacoes from './components/Informacoes';
+import CriarIncidente from './components/CriarIncidente';
 
 function App() {
-	return (	
+	return (
 		<Router>
 			<Navigation />
-
-			<Route path="/" exact component={IncidentsList} />
-			<Route path="/incident" component={CreateIncident} />
-			<Route path="/user" component={CreateUser} />
-			<Route path="/user/:id" component={CreateUser} />
+			<div className="container">
+				<Route path="/" exact component={Inicio} />
+				<Route path="/promocoes" component={Promocoes} />
+				<Route path="/cardapio" component={Cardapio} />
+				<Route path="/passeios" component={Passeios} />
+				<Route path="/info" component={Informacoes} />
+				<Route path="/incidentes" component={CriarIncidente} />
+			</div>
 		</Router>
 	);
 }

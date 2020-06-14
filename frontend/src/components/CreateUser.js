@@ -3,7 +3,8 @@ import axios from 'axios';
 
 export default class CreateUser extends Component {
 	state = {
-		users: []
+		users: [],
+		firstname:''
 	};
 
 	async componentDidMount() {
@@ -12,18 +13,33 @@ export default class CreateUser extends Component {
 		console.log(this.state.users);
 	}
 
+	onChangeUsername = (e) => {
+		this.setState({
+			firstname: e.target.value
+		});
+		console.log(this.state.firstname)
+	}
+
+	onSubmit = e => {
+		axios.post('http:localhost:5000/api/users', )
+		e.preventDefault();
+	}
+
 	render() {
 		return (
 			<div className="row">
 				<div className="col-md-4">
           <div className="card card-body">
             <h3>Create New User</h3>
-            <form>
+            <form >
               <div className="form-group">
-                <input type="text" className="form-control my-3" placeholder="Firstname" />
+                <input type="text" className="form-control my-3" placeholder="Firstname" onChange={this.onChangeUsername} />
                 <input type="text" className="form-control my-3" placeholder="Lastname"/>
                 <input type="email" className="form-control my-3" placeholder="E-mail"/>
               </div>
+							<button type="submit" className="btn btn-primary">
+								Save
+							</button>
             </form>
           </div>
         </div>

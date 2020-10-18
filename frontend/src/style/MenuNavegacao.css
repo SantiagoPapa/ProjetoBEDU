@@ -1,0 +1,35 @@
+.menu {
+  background-color: #07012c;
+  padding: 15px;
+}
+
+.menu h2 {
+  font-size: 3em;
+  color: rgb(0, 255, 170);
+  text-shadow: 2px 2px 7px rgb(149, 255, 149);
+}
+
+.nav-menu {
+  text-align: center;
+}
+
+.menu-lista {
+  list-style: none;
+}
+
+.nav-list {
+  padding: 20px 0px 20px 0px;
+}
+
+.nav-link:hover {
+  border-bottom: 2px solid #d9d4ca;
+  text-shadow: 2px 2px 7px rgb(149, 255, 149);
+}
+
+.menu-lista a {
+  text-decoration: none;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #d9d4ca;
+}
+

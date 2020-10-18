@@ -11,23 +11,23 @@ export default class CreateUser extends Component {
 		const res = await axios.get('http://localhost:5000/api/users');
 		this.setState({ users: res.data });
 		console.log(this.state.users);
-	}
+	};
 
 	onChangeUsername = (e) => {
 		this.setState({
 			firstname: e.target.value
 		});
 		console.log(this.state.firstname)
-	}
+	};
 
 	onSubmit = e => {
 		axios.post('http:localhost:5000/api/users', )
 		e.preventDefault();
-	}
+	};
 
 	render() {
 		return (
-			<div className="row">
+			<div className="container">
 				<div className="col-md-4">
           <div className="card card-body">
             <h3>Create New User</h3>

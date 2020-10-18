@@ -1,11 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Passeios extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+const Passeios = () => {
+  return (
+    <div className="container">
+      <h1>Passeios</h1>
+    </div>
+  )
 }
+
+export default Passeios;

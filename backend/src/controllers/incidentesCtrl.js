@@ -16,18 +16,19 @@ incidentesCtrl.buscarIncidente = async (req, res) => {
 
 // |POST FOR CREATE NEW INCIDENT| \\
 incidentesCtrl.criarIncidente = async (req, res) => {
-	const { autor, telefone, titulo, email, descricao, referencia, foto_url } = req.body;
+	const { nome, telefone, titulo, email, descricao, local, foto } = req.body;
 	const novoIncidente = new Incidente({
-		autor,
+		nome,
 		telefone,
 		titulo,
 		email,
 		descricao,
-		referencia,
-		foto_url
+		local,
+		foto
 	});
 	await novoIncidente.save();
 	res.send({ mensagem: 'Incidente criado com sucesso. Obrigado pelo feedback!' });
+	console.log(req.body);
 };
 
 // |PUT FOR UPDATE INCIDENT| \\
@@ -39,7 +40,9 @@ incidentesCtrl.atualizarIncidente = async (req, res) => {
 // |DELETE FOR DELETE INCIDENT| \\
 incidentesCtrl.deletarIncidente = async (req, res) => {
 	await Incidente.deleteOne({ _id: req.params.id });
-	res.send({ mensagem: 'Incidente deletado com sucesso. OBS: O Incidente ficará registrado no backup para maior controle.' });
+	res.send({
+		mensagem: 'Incidente deletado com sucesso. OBS: O Incidente ficará registrado no backup para maior controle.'
+	});
 };
 
 module.exports = incidentesCtrl;

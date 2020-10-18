@@ -1,11 +1,10 @@
-import React, { Component } from 'react'
+import React from 'react';
 
-export default class Inicio extends Component {
-  render() {
-    return (
-      <div>
-        <h1>Inicio</h1>
-      </div>
-    )
-  }
+export default function Inicio () {
+  return (
+    <div className="container">
+      <h1>Bem-vindo</h1>
+
+    </div>
+  )
 }

@@ -1,11 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-export default class Promocoes extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    )
-  }
+export default function Promocoes () {
+  return (
+    <div className="container">
+      <h1>Promoções</h1>
+    </div>  
+  )
 }

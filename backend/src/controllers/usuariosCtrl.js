@@ -35,7 +35,7 @@ usersController.updateUser = async (req, res) => {
 // |DELETE FOR DELETE USER| \\
 usersController.deleteUser = async (req, res) => {
 	await User.deleteOne({ _id: req.params.id });
-	res.send({ message: `Delete User` });
+	res.send({ message: 'Delete User' });
 };
 
 module.exports = usersController;

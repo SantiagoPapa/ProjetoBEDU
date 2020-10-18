@@ -1,0 +1,61 @@
+.container-form-incidente {
+  width: auto;
+}
+
+input, textarea {
+  padding: 7px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  margin: 5px;
+  resize: vertical;
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.group-input {
+  display: flex;
+  flex-direction: column;
+}
+
+.group-input input{
+  margin: 0;
+}
+
+button {
+  width: 130px;
+  height: 25px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn-enviar {
+  background-color: #4CAF50;
+  color: white;
+
+}
+.btn-enviar:hover {
+  background-color: #45a049;
+}
+
+.btn-cancelar {
+  background-color: rgb(232, 0, 0);
+  color: white;
+}
+
+.btn-cancelar:hover {
+  background-color: rgb(169, 2, 2);
+}
+

@@ -1,21 +1,15 @@
 const { Schema, model } = require('mongoose');
 
 const incidenteSchema = new Schema(
-	{
-		autor: String,
-		telefone: Number,
-		titulo: {
-			type: String,
-			required: true
+		{
+			nome: String,
+			telefone: Number,
+			titulo: String,
+			email: String,
+			descricao: String,
+			local: String,
+			foto: String
 		},
-		email: String,
-		descricao: {
-			type: String,
-			required: true
-		},
-		referencia: String,
-		foto_url: String
-	},
 	{
 		timestamps: true
 	}

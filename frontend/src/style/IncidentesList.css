@@ -15,9 +15,7 @@ h2 {
 }
 
 div .booking-card {
-  /* background-image SOLO PARA PRUEBA */
-  background-image: url("https://www.mndelgolfo.com/wp-content/uploads/2017/07/como-reparar-pisos-rotos.jpg");
-  /* */
+
   position: relative;
   width: 300px;
   display: flex;

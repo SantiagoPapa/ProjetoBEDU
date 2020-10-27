@@ -6,7 +6,7 @@ export default function MenuNavegacao (props) {
 	
 	return (
 	<div className="menu">
-		<h2>FIXotel</h2>
+		<h2>fixotel</h2>
 		<nav className="nav-menu">
 			<ul className="menu-lista">
 				<LinkMenu titulo="Tarefas e Problemas" src="/incidentes" />

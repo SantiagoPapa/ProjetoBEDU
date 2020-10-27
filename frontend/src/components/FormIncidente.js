@@ -147,7 +147,7 @@ const FormIncidente = (props) => {
 				</div>
 				<div className="container-btn">
 					<button type="button" className="btn-enviar" onClick={enviarForm}>
-						{idIncidente === '' ? 'Criar incidente' : 'Atualizar Incidente'}
+						{idIncidente === '' ? 'Criar Incidente' : 'Atualizar'}
 					</button>
 					<button type="button" className="btn-cancelar" onClick={cancelarForm}>
 						Cancelar

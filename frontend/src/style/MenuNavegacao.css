@@ -1,11 +1,16 @@
 .menu {
   background-color: #0D131C;
-  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 .menu h2 {
   font-size: 3rem;
+  font-weight: 500;
   color: #E08300;
+  text-align: center;
 }
 
 .menu h2:hover {
@@ -18,11 +23,12 @@
 }
 
 .menu-lista {
+  display: flex;
   list-style: none;
 }
 
 .nav-list {
-  padding: 20px;
+  padding: 5px;
 }
 
 .nav-link:hover {

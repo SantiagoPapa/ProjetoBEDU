@@ -16,7 +16,8 @@ const FormIncidente = (props) => {
 		email: '',
 		descricao: '',
 		local: '',
-		foto: ''
+		foto: '',
+		ativo: true
 	};
 
 	useEffect(
@@ -32,7 +33,6 @@ const FormIncidente = (props) => {
 
 	const getIncidente = async (id) => {
 		const res = await axios.get(urlApi + id);
-		console.log(res.data);
 		setIncidente(res.data);
 	};
 
@@ -40,6 +40,7 @@ const FormIncidente = (props) => {
 	const onInputChange = (data) => {
 		const { name, value } = data.target;
 		setIncidente({ ...incidente, [name]: value });
+		console.log(incidente.ativo);
 	};
 
 	//SUBMIT INCIDENTE
@@ -61,6 +62,9 @@ const FormIncidente = (props) => {
 		setIdIncidente('');
 		getListaIncidentes();
 	};
+
+	const fecharIncidente = () => {
+	}
 
 	return (
 		<div className="container-form-incidente">
@@ -132,7 +136,7 @@ const FormIncidente = (props) => {
 							value={incidente.local}
 							onChange={onInputChange}
 						/>
-					</div>	
+					</div>
 					<div className="group-input">
 						<label htmlFor="form-foto">Foto do Incidente:</label>
 						<input
@@ -143,7 +147,7 @@ const FormIncidente = (props) => {
 							value={incidente.foto}
 							onChange={onInputChange}
 						/>
-					</div>	
+					</div>
 				</div>
 				<div className="container-btn">
 					<button type="button" className="btn-enviar" onClick={enviarForm}>
@@ -151,6 +155,9 @@ const FormIncidente = (props) => {
 					</button>
 					<button type="button" className="btn-cancelar" onClick={cancelarForm}>
 						Cancelar
+					</button>
+					<button type="button" className="btn-fechar" onClick={fecharIncidente}>
+						Fechar Incidente
 					</button>
 				</div>
 			</form>

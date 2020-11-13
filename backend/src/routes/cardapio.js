@@ -1,13 +1,13 @@
 const { Router } = require('express');
 const router = Router();
 
-const { buscarCardapios, criarComida, deletarComida } = require('../controllers/cardapioCtrl');
+const { buscarTodasComidas, criarComida, eliminarComida } = require('../controllers/cardapioCtrl');
 
 router.route('/')
-  .get(buscarCardapios)
+  .get(buscarTodasComidas)
   .post(criarComida)
 
 router.route('/:id')
-  .delete(deletarComida)
+  .delete(eliminarComida)
   
 module.exports = router;

@@ -5,6 +5,7 @@
 /.pnp
 .pnp.js
 /img
+/ESPERA
 
 # testing
 /coverage

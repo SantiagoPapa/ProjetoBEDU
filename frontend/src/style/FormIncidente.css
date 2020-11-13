@@ -27,7 +27,7 @@ input, textarea {
   margin: 0;
 }
 
-button {
+.form button {
   width: 130px;
   height: 25px;
   padding: 5px 10px;
@@ -42,12 +42,13 @@ button {
 }
 
 .btn-enviar {
-  background-color: #4CAF50;
+  background-color: #34ab38;
   color: white;
 
 }
 .btn-enviar:hover {
-  background-color: #45a049;
+  background-color: #007006;
+  transition: 250ms;
 }
 
 .btn-cancelar {
@@ -57,5 +58,15 @@ button {
 
 .btn-cancelar:hover {
   background-color: rgb(169, 2, 2);
+  transition: 250ms;
+}
+
+.btn-fechar {
+  background-color: #3c3ce1;
+  color: white;
+}
+.btn-fechar:hover {
+  background-color: #101077;
+  transition: 250ms;
 }
 

@@ -1,18 +1,12 @@
-.card-menu {
+.card-incidente {
   display: flex;
   justify-content: space-evenly;
   flex-flow: wrap;
 
 }
-.container .post-incidente {
+.card-incidente .post-incidente {
   width: 250px;
   height: 400px;
-}
-.container .post-cardapio {
-  width: 350px;
-  height: 500px;
-}
-.container .post {
   display: flex;
   overflow: hidden;
   flex-direction: column;
@@ -21,16 +15,17 @@
   border-radius: 15px;
   margin: 10px;
 }
-.container .post:hover .header_post {
+
+.card-incidente .post-incidente:hover .imagem_incidente {
   margin-top: 0px;
 }
-.container .post:hover .body_post {
+.card-incidente .post-incidente:hover .body_post {
   height: 50%;
 }
-.container .post:hover img {
+.card-incidente .post-incidente:hover img {
   transform: translatey(-10px) translatex(-5px) scale(1.1);
 }
-.container .post .header_post {
+.card-incidente .post-incidente .imagem_incidente {
   width: 100%;
   height: 40%;
   background: #ddd;
@@ -42,13 +37,13 @@
   -o-transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
   transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
 }
-.container .post .header_post img {
+.card-incidente .post-incidente .imagem_incidente img {
   max-width: 100%;
   min-height: 250px;
   max-height: auto; 
   transition: ease-in-out 300ms;
 }
-.container .post .body_post {
+.card-incidente .post-incidente .body_post {
   width: 100%;
   height: 60%;
   background: #fff;
@@ -64,21 +59,21 @@
   transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
   
 }
-.container .post .body_post .post_content {
+.card-incidente .post-incidente .body_post .conteudo_incidente {
   width: 95%;
   height: 90%;
   background: #fff;
   position: relative;
 }
-.container .post .body_post .post_content h1 {
+.card-incidente .post-incidente .body_post .conteudo_incidente h1 {
   font-size: 18px;
   font-weight: bold;
 }
-.container .post .body_post .post_content p {
+.card-incidente .post-incidente .body_post .conteudo_incidente p {
   font-size: 12px;
   font-weight: normal;
 }
-.container .post .body_post .post_content .container_infos {
+.card-incidente .post-incidente .body_post .conteudo_incidente .container_infos {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -87,17 +82,17 @@
   border-top: 1px solid rgba(0, 0, 0, 0.2);
   padding-top: 15px;
 }
-.container .post .body_post .post_content .container_infos .postedBy {
+.card-incidente .post-incidente .body_post .conteudo_incidente .container_infos .postedBy {
   display: flex;
   flex-direction: column;
   letter-spacing: .2px;
 }
 
-.container .post .body_post .post_content .container_infos .postedBy p {
+.card-incidente .post-incidente .body_post .conteudo_incidente .container_infos .postedBy p {
   margin-top: 5px;
 }
 
-.container .post .body_post .post_content .container_infos .postedBy span {
+.card-incidente .post-incidente .body_post .conteudo_incidente .container_infos .postedBy span {
   font-size: .5rem;
   text-transform: uppercase;
   opacity: 0.7;
@@ -105,7 +100,7 @@
   font-weight: bold;
 }
 
-.container .post .body_post .post_content .container_infos .container_tags span {
+.card-incidente .post-incidente .body_post .conteudo_incidente .container_infos .container_tags span {
   font-size: .6rem;
   text-transform: uppercase;
   opacity: 0.5;
@@ -113,7 +108,7 @@
   font-weight: bold;
 }
 
-.container .post .body_post .post_content .container_infos .container_tags .tags ul li {
+.card-incidente .post-incidente .body_post .conteudo_incidente .container_infos .container_tags .tags ul li {
   font-size: .6rem;
   letter-spacing: 1px;
   list-style: none;
@@ -127,7 +122,7 @@
   cursor: pointer;
 }
 
-.container .post .body_post .post_content .container_infos .container_tags .tags ul li:before {
+.card-incidente .post-incidente .body_post .conteudo_incidente .container_infos .container_tags .tags ul li:before {
   content: '';
   font-weight: bold;
   text-align: center;
@@ -144,7 +139,7 @@
   -o-transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
   transition: cubic-bezier(0.68, -0.55, 0.27, 1.55) 320ms;
 }
-.container .post .body_post .post_content .container_infos .container_tags .tags ul li:hover:before {
+.card-incidente .post-incidente .body_post .conteudo_incidente .container_infos .container_tags .tags ul li:hover:before {
   height: 18px;
   background: #CC2500;
 }

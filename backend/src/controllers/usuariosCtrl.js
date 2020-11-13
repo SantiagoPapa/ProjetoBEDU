@@ -1,41 +1,42 @@
-const usersController = {};
+const usuariosCtrl = {};
 
-const User = require('../models/Users');
+const Usuario = require('../models/Usuario');
 
 // |GET FOR FIND ALL USERS| \\
-usersController.getAllUsers = async (req, res) => {
-	const users = await User.find();
-	res.json(users);
+usuariosCtrl.buscarTodosUsuarios = async (req, res) => {
+	const usuarios = await Usuario.find();
+	res.json(usuarios);
 };
 
 // |GET FOR FIND USER BY ID| \\
-usersController.getUser = async (req, res) => {
-	const user = await User.findOne({ _id: req.params.id });
-	res.json(user);
+usuariosCtrl.buscarUsuario = async (req, res) => {
+	const usuarios = await Usuario.findOne({ _id: req.params.id });
+	res.json(usuarios);
 };
 
 // |POST FOR CREATE NEW USER| \\
-usersController.createUser = async (req, res) => {
-	const { firstname, lastname, email } = req.body;
-	const newUser = new User({
-		firstname,
-		lastname,
-		email
+usuariosCtrl.criarUsuario = async (req, res) => {
+	const { nome, sobrenome, email, senha } = req.body;
+	const novoUsuario = new Usuario({
+		nome,
+		sobrenome,
+		email,
+		senha
 	});
-	await newUser.save();
-	res.send({ message: 'Created User' });
+	await novoUsuario.save();
+	res.send({ message: 'Usuário Criado.' });
 };
 
 // |PUT FOR UPDATE USER| \\
-usersController.updateUser = async (req, res) => {
-	await User.updateOne({ _id: req.params.id }, req.body);
-	res.send({ message: 'Update this User' });
+usuariosCtrl.atualizarUsuario = async (req, res) => {
+	await Usuario.updateOne({ _id: req.params.id }, req.body);
+	res.send({ message: 'Usuário atualizado' });
 };
 
 // |DELETE FOR DELETE USER| \\
-usersController.deleteUser = async (req, res) => {
-	await User.deleteOne({ _id: req.params.id });
-	res.send({ message: 'Delete User' });
+usuariosCtrl.eliminarUsuario = async (req, res) => {
+	await Usuario.deleteOne({ _id: req.params.id });
+	res.send({ message: 'Usuário eliminado' });
 };
 
-module.exports = usersController;
+module.exports = usuariosCtrl;

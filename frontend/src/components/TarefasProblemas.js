@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../style/IncidentesList.css';
-import ListaIncidentes from './ListaIncidentes';
 import FormIncidente from './FormIncidente';
+import ListaIncidentes from './ListaIncidentes';
 
 const TarefasProblemas = () => {
 	const [ listaIncidentes, setListaIncidentes ] = useState([]);

@@ -10,10 +10,10 @@ export default function MenuNavegacao (props) {
 		<nav className="nav-menu">
 			<ul className="menu-lista">
 				<LinkMenu titulo="Tarefas e Problemas" src="/incidentes" />
-				<LinkMenu titulo="Promoções" src="/promocoes" />
-				<LinkMenu titulo="Passeios" src="/passeios" />
-				<LinkMenu titulo="Cardápio" src="/cardapio" />
-				<LinkMenu titulo="Informações Gerais" src="/info" />
+				{/* <LinkMenu titulo="Promoções" src="/promocoes" /> */}
+				{/* <LinkMenu titulo="Passeios" src="/passeios" /> */}
+				{/* <LinkMenu titulo="Cardápio" src="/cardapio" /> */}
+				{/* <LinkMenu titulo="Informações Gerais" src="/info" /> */}
 				<LinkMenu titulo="Sair" src="/sair" />
 			</ul>
 		</nav>

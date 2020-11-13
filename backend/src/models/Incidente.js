@@ -8,7 +8,8 @@ const incidenteSchema = new Schema(
 			email: String,
 			descricao: String,
 			local: String,
-			foto: String
+			foto: String,
+			ativo: Boolean,
 		},
 	{
 		timestamps: true

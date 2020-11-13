@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // ROUTES
-app.use('/api/users', require('./routes/users'));
+app.use('/api/usuarios', require('./routes/usuarios'));
 app.use('/api/incidentes', require('./routes/incidentes'));
 app.use('/api/cardapio', require('./routes/cardapio'));
 

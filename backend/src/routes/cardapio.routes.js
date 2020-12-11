@@ -3,11 +3,10 @@ const router = Router();
 
 const { buscarTodasComidas, criarComida, eliminarComida } = require('../controllers/cardapioCtrl');
 
-router.route('/')
-  .get(buscarTodasComidas)
-  .post(criarComida)
+router.get('/', buscarTodasComidas);
 
-router.route('/:id')
-  .delete(eliminarComida)
-  
+router.post('/', criarComida);
+
+router.delete('/:id', eliminarComida);
+
 module.exports = router;

@@ -8,7 +8,7 @@ const ListaIncidentes = (props) => {
 			{listaIncidentes.map((incidente) => (
 				<div className="post-incidente" key={incidente._id}>
 					<div className="imagem_incidente">
-						<img src={incidente.foto} />
+						<img src={incidente.foto} alt={incidente.titulo}/>
 					</div>
 					<div className="body_post">
 						<div className="conteudo_incidente">

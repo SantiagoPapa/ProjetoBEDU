@@ -1,0 +1,25 @@
+
+.container-login {
+  margin: auto;
+  width: 250px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container-login h1 {
+  color: #E08300;
+}
+
+.container-login input {
+  padding: 7px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+.container-login .btn-enviar {
+  background-color: #E08300;
+}

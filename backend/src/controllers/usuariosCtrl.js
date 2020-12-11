@@ -1,5 +1,6 @@
 const usuariosCtrl = {};
 
+const passport = require('passport');
 const Usuario = require('../models/Usuario');
 
 // |GET FOR FIND ALL USERS| \\
@@ -23,6 +24,7 @@ usuariosCtrl.criarUsuario = async (req, res) => {
 		email,
 		senha
 	});
+	novoUsuario.senha = await novoUsuario.encryptPassword(senha)
 	await novoUsuario.save();
 	res.send({ message: 'Usuário Criado.' });
 };
@@ -38,5 +40,11 @@ usuariosCtrl.eliminarUsuario = async (req, res) => {
 	await Usuario.deleteOne({ _id: req.params.id });
 	res.send({ message: 'Usuário eliminado' });
 };
+
+// Authenticator
+usuariosCtrl.login = passport.authenticate('local', {
+	failureRedirect: '/login',
+	successRedirect: '/incidentes'
+})
 
 module.exports = usuariosCtrl;
